@@ -1,0 +1,116 @@
+/* ===== Global ===== */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #e9eef2;
+  display: flex; /* AJOUTÉ */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px; /* AJOUTÉ pour l'espace sur les bords */
+}
+
+.student-card {
+  width: 100%; 
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  border: 1px solid #d0d7de;
+}
+
+/* ===== Bande bleue Header ===== */
+.header {
+  background: #0056a3;
+  color: white;
+  display: flex;            
+  align-items: center;     
+  padding: 8px 16px;
+  gap: 12px;
+  width: 100%;               
+}
+
+.header .logo {
+  width: 50%;
+  height: 50px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-text h1 {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.header-text p {
+  font-size: 12px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.header-text p small {
+  display: block;         
+}
+
+/* ===== Corps de la carte ===== */
+.card-body {
+  display: flex;
+  padding: 16px;
+  gap: 20px;
+}
+
+.photo img {
+  width: 120px;
+  height: 140px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+.info {
+  flex: 1;
+  font-size: 14px;
+  color: #1b1b1b;
+}
+
+.info p {
+  margin: 8px 0;
+}
+
+.info strong {
+  color: #004b8d;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .student-card {
+    width: 95%;
+  }
+  .card-body {
+    flex-direction: column;
+    align-items: center;
+  }
+  .photo img {
+    width: 100px;
+    height: 120px;
+  }
+}
+
+/* Supprimer cette classe .hero si elle n'est pas utilisée */
+.hero {
+  border: 2px solid rgb(22, 21, 21);
+  justify-content: center;
+  align-items: center;
+}

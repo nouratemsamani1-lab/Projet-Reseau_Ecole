@@ -1,40 +1,124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Carte Étudiante</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ateliers Créatifs</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-     <div class="hero">
-        <div class="student-card">
-    <!-- Bande bleue -->
-    <header class="header">
-      <img src="images/logo.png" alt="Logo de l'université" class="logo">
 
-        
-        <p>CARTE D’Étudiant</p>
-        <p><br><small>STUDENT ID</small></p>
-        </header>
-      </div>
+<header>
     
+    <h1>Ateliers Créatifs</h1>
+    <nav role="navigation">
+        <ul class="menu">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Programme</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Corps de la carte -->
-    <main class="card-body">
-      <div class="photo">
-        <img src="photo.jpg" alt="Photo de l'étudiant">
-      </div>
+</header>
 
-      <div class="info">
-        <p><strong>Establishmet|Etablissement</strong>ECOLE D'INGENIERIE DIGITALE ET D'INTELLIGENCE ARTIFICIELLE</p>
-        <p><strong>Full Name | Nom et Prénom</strong>Noura Temsamani</p>
-        <p><strong>Registration number | Matricule</strong>2301019</p>
-        <p><strong>Personal bank details | RIB Personnel</strong>225270978161100230101966</p>
-      </div>
-    </main>
-  </div>
-     </div>
-  
+<main class="container">
+
+    <section class="workshops">
+        <h2>Liste des ateliers</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Durée</th>
+                    <th>Niveau</th>
+                    <th>Prix</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr><td>Peinture aquatique </td><td>2h</td><td>Débutant</td><td>150 DH</td><td>12/12/2025</td></tr>
+                <tr><td>Théatre</td><td>3h</td><td>Débutant</td><td>200 DH</td><td>18/12/2025</td></tr>
+                <tr><td>Danse classique </td><td>2h</td><td>Moyen</td><td>180 DH</td><td>21/12/2025</td></tr>
+                <tr><td>Montage Vidéo</td><td>4h</td><td>Moyen</td><td>220 DH</td><td>24/12/2025</td></tr>
+                <tr><td>Dessin </td><td>3h</td><td>Avancé</td><td>250 DH</td><td>28/12/2025</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- SECTION FORMULAIRE -->
+    <section class="signup-form">
+        <h2>Formulaire d'inscription</h2>
+
+        <form>
+
+            <fieldset>
+                <legend>Informations personnelles</legend>
+
+                <label>Prénom :
+                    <input type="text" name="prenom" placeholder="Votre prénom" required>
+                </label>
+
+                <label>Nom :
+                    <input type="text" name="nom" placeholder="Votre nom" required>
+                </label>
+
+                <label>Email :
+                    <input type="email" name="email" placeholder="exemple@mail.com" required>
+                </label>
+
+                <label>Date de naissance :
+                    <input type="date" name="birthdate" required>
+                </label>
+
+                <p>Genre :</p>
+                <label><input type="radio" name="genre" value="Homme" required> Homme</label>
+                <label><input type="radio" name="genre" value="Femme"> Femme</label>
+                
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Choix des ateliers</legend>
+
+                <label><input type="checkbox" name="atelier_peinture"> Peinture</label>
+                <label><input type="checkbox" name="atelier_photo"> Photographie</label>
+                <label><input type="checkbox" name="atelier_video"> Vidéo</label>
+
+                <label>Niveau d'expérience :
+                    <select name="experience" required>
+                        <option value="">-- Sélectionner --</option>
+                        <option>Débutant</option>
+                        <option>Intermédiaire</option>
+                        <option>Avancé</option>
+                    </select>
+                </label>
+
+                <label>Justificatif (optionnel) :
+                    <input type="file" name="justificatif">
+                </label>
+
+                <label>Commentaire :
+                    <textarea name="commentaire" rows="4" placeholder="Vos attentes..."></textarea>
+                </label>
+            </fieldset>
+
+            <div class="buttons">
+                <button type="submit">Envoyer</button>
+                <button type="reset">Réinitialiser</button>
+            </div>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>Contact : ateliers@creatifs.com | Tel : +212 600 00 00 00</p>
+</footer>
+
 </body>
 </html>
